@@ -176,6 +176,7 @@ body .pop-form form .input-field {
 
 body .pop-form form .input-field select {
   outline: none;
+  background: none;
   border: none;
   height: 32px;
   width: 95%;
@@ -328,7 +329,7 @@ body main {
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-top: 50px;
-  padding: 5px 20px;
+  padding: 5px 20px 0;
 }
 
 body main .table {
