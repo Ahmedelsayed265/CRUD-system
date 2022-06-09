@@ -134,13 +134,13 @@ function Update(i) {
   inputs[5].value = Employees[i].Dep;
   inputs[6].value = Employees[i].Salary;
   options = Employees[i].City;
+  radioInput = Employees[i].Gender;
   document.getElementById("city").value = Employees[i].City;
   for (let j = 0; j < radios.length; j++) {
-    if (radios[j].checked === true) {
-      radios[j].checked = false;
+    if (radios[j].value === radioInput) {
+      radios[j].checked = true;
     }
   }
-  radioInput = undefined;
   save.innerHTML = "Update Info";
   mood = "update";
   indx = i;
