@@ -209,14 +209,13 @@ body {
     }
   }
   main {
-    // height: calc(100% - 190px);
+    height: calc(100% - 190px);
     width: 90%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-top: 50px;
     padding: 5px 20px;
     .table {
       width: 100%;
-      height: 100%;
       thead {
         tr {
           color: #29129d;
