@@ -323,7 +323,6 @@ body nav button {
 }
 
 body main {
-  height: calc(100% - 190px);
   width: 90%;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -342,7 +341,7 @@ body main .table thead tr {
 }
 
 body main .table #Tbody tr {
-  height: 50px !important;
+  height: 50px;
 }
 
 body main .table #Tbody tr button {
