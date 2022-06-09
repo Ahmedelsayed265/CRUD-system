@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+</head>
+
+<body>
+    <div class="layer hide"></div>
+    <div class="pop-form hide">
+        <div class="head">
+            <h3>Add Employee</h3>
+            <button id="close"><i class="far fa-times-circle"></i></button>
+        </div>
+        <form action="">
+            <div class="input-field">
+                <label for="Pin-code">Pin-Code*</label>
+                <input type="text" placeholder="Pin-Code" maxlength="5">
+            </div>
+            <div class="input-field">
+                <label for="Name">Name*</label>
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="input-field">
+                <label for="date-of-birth">Date Of Birth*</label>
+                <input type="date">
+            </div>
+            <div class="input-field">
+                <select id="city" onchange="getOptionValue()">
+                    <option value="City" selected hidden>City</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Menoufia">Menoufia</option>
+                    <option value="Alex">Alex</option>
+                    <option value="Menia">Menia</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="email">Email ID*</label>
+                <input type="email" placeholder="Email ID">
+            </div>
+            <div class="input-field">
+                <label for="phone">Phone Number*</label>
+                <input type="text" placeholder="Phone" maxlength="11">
+            </div>
+            <div class="input-field">
+                <label for="Department">Department*</label>
+                <input type="text" placeholder="Department">
+            </div>
+            <div class="input-field">
+                <label for="salary">Salary*</label>
+                <input type="number" placeholder="Salary">
+            </div>
+            <div class="outer-radio">
+                <div class="radio-field">
+                    <input class="rad" type="radio" value="male" onclick="radio(this.value)">
+                    <label for="Male">Male</label>
+                </div>
+                <div class="radio-field">
+                    <input class="rad" type="radio" value="female" onclick="radio(this.value)">
+                    <label for="Female"> Female</label>
+                </div>
+            </div>
+        </form>
+        <button class="save">Save</button>
+    </div>
+    <nav>
+        <h1 class="logo">CRUD <span>Operations</span></h1>
+        <div class="search-field">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="search here.." onkeyup="search(this.value)">
+        </div>
+        <button id="open">Add Employee</button>
+    </nav>
+    <main>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Pin Code</th>
+                    <th>Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Email ID</th>
+                    <th>Phone Number</th>
+                    <th>Department</th>
+                    <th>Salary(EGP)</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="Tbody">
+            </tbody>
+        </table>
+    </main>
+    <div class="navigation">
+    </div>
+    <footer>
+        <h4>Made with <i class="fas fa-heart"></i> By Ahmed Elsayed</h4>
+    </footer>
+</body>
+<script src="app.js"></script>
+
+</html>

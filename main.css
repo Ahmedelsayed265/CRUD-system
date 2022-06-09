@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+body .layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+
+body .layer.hide {
+  display: none;
+}
+
+body .pop-form {
+  width: 400px;
+  height: 550px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+}
+
+body .pop-form button {
+  float: right;
+  width: 100px;
+  height: 30px;
+  background-color: #29129d;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+body .pop-form.hide {
+  display: none;
+}
+
+body .pop-form .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .pop-form .head h3 {
+  font-size: 24px;
+  color: #29129d;
+  font-weight: 500;
+}
+
+body .pop-form .head button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+body .pop-form .head button i {
+  color: #29129d;
+  font-size: 24px;
+}
+
+body .pop-form form {
+  margin-top: 30px;
+  width: 100%;
+  height: 430px;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .pop-form form::-webkit-scrollbar {
+  width: 0;
+}
+
+body .pop-form form .outer-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 30px;
+}
+
+body .pop-form form .outer-radio .radio-field {
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .pop-form form .outer-radio .radio-field label {
+  margin-left: 5px;
+}
+
+body .pop-form form .outer-radio .radio-field:first-child {
+  margin-right: 50px;
+}
+
+body .pop-form form .input-field {
+  width: 100%;
+  height: 50px;
+  border: 1px solid silver;
+  margin-top: 26px;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .pop-form form .input-field select {
+  outline: none;
+  border: none;
+  height: 32px;
+  width: 95%;
+  cursor: pointer;
+}
+
+body .pop-form form .input-field label {
+  position: absolute;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  color: #000;
+  font-size: 14px;
+  background-color: #fff;
+  margin-top: -10px;
+}
+
+body .pop-form form .input-field label.hide-label {
+  display: none;
+}
+
+body .pop-form form .input-field input {
+  width: 95%;
+  height: 30px;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+body .pop-form form .input-field input::-webkit-outer-spin-button, body .pop-form form .input-field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body .pop-form form .input-field input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body .pop-form form .input-field input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body .pop-form form .input-field input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+body .pop-form form .input-field input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+body .pop-form form .input-field input:focus::placeholder {
+  color: transparent;
+}
+
+body .pop-form form .input-field input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 18px;
+  height: 20px;
+  cursor: pointer;
+}
+
+body nav {
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 50px;
+  padding: 0 20px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+body nav .logo {
+  color: #29129d;
+  font-size: 22px;
+}
+
+body nav .logo span {
+  font-size: 18px;
+}
+
+body nav .search-field {
+  -webkit-box-shadow: #ccdbe8 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+          box-shadow: #ccdbe8 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  width: 400px;
+  height: 30px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+}
+
+body nav .search-field i {
+  margin-right: 10px;
+  color: #29129d;
+}
+
+body nav .search-field input {
+  width: 85%;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+body nav .search-field input::-webkit-input-placeholder {
+  color: #29129d;
+  font-size: 12px;
+}
+
+body nav .search-field input:-ms-input-placeholder {
+  color: #29129d;
+  font-size: 12px;
+}
+
+body nav .search-field input::-ms-input-placeholder {
+  color: #29129d;
+  font-size: 12px;
+}
+
+body nav .search-field input::placeholder {
+  color: #29129d;
+  font-size: 12px;
+}
+
+body nav button {
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  background-color: #29129d;
+  height: 30px;
+  width: 115px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body main {
+  width: 90%;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-top: 50px;
+  padding: 5px 20px;
+}
+
+body main .table {
+  width: 100%;
+  height: 100%;
+}
+
+body main .table thead tr {
+  color: #29129d;
+  height: 50px;
+}
+
+body main .table #Tbody tr {
+  height: 50px;
+}
+
+body main .table #Tbody tr button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+body main .table #Tbody tr #update i {
+  color: #29129d;
+  font-size: 16px;
+}
+
+body main .table #Tbody tr #delete {
+  color: #f00;
+  font-size: 16px;
+}
+
+body main .table td,
+body main .table th {
+  text-align: center;
+}
+
+body main .table td:nth-child(1),
+body main .table th:nth-child(1) {
+  text-align: start;
+}
+
+body main .table td:last-child,
+body main .table th:last-child {
+  text-align: end;
+}
+
+body main .table td:last-child {
+  text-align: center;
+}
+
+body .navigation {
+  height: 40px;
+  width: 90%;
+}
+
+body footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #29129d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer h4 {
+  color: #fff;
+  font-weight: 300;
+}
+/*# sourceMappingURL=main.css.map */
