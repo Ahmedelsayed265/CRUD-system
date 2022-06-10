@@ -1,12 +1,15 @@
 const openForm = document.getElementById("open"),
   closeForm = document.getElementById("close"),
   updated = document.getElementById("updated"),
+  added = document.getElementById("added"),
   layer = document.querySelector(".layer"),
   Form = document.querySelector(".pop-form"),
   save = document.querySelector(".save"),
   Labels = document.querySelectorAll("form .input-field label"),
   inputs = document.querySelectorAll("form .input-field input"),
   selctions = document.querySelectorAll("form select option"),
+  continues = document.querySelectorAll(".continue"),
+  closeAll = document.querySelectorAll(".close-all"),
   radios = document.querySelectorAll(".rad"),
   tbody = document.getElementById("Tbody");
 let radioInput,
@@ -39,6 +42,19 @@ for (let i = 0; i < inputs.length; i++) {
 for (let i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("blur", () => {
     Labels[i].classList.add("hide-label");
+  });
+}
+for (let index = 0; index < continues.length; index++) {
+  continues[index].addEventListener("click", () => {
+    Form.classList.remove("hide");
+    updated.classList.add("hide");
+  });
+}
+for (let j = 0; j < continues.length; j++) {
+  closeAll[j].addEventListener("click", () => {
+    Form.classList.add("hide");
+    updated.classList.add("hide");
+    layer.classList.add("hide");
   });
 }
 //==============*end show-hide-form and Focusing inputs=================//
@@ -74,6 +90,8 @@ save.addEventListener("click", () => {
   ) {
     if (mood === "add") {
       Employees.push(Employee);
+      Form.classList.add("hide");
+      added.classList.remove("hide");
     } else {
       Employees[indx] = Employee;
       save.innerHTML = "Save";
