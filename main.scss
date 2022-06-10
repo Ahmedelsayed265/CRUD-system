@@ -25,6 +25,107 @@ body {
       display: none;
     }
   }
+  .add-wraper {
+    &.hide {
+      display: none;
+    }
+    width: 400px;
+    height: 550px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    .Close {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      div {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        span {
+          position: absolute;
+          height: 20px;
+          width: 1px;
+          background: #000;
+          display: block;
+          &:nth-child(1) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 30px;
+    }
+    p {
+      text-align: center;
+      margin-top: 25px;
+      color: #939292;
+    }
+    .circle-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 55px;
+      .circle {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        position: relative;
+        border: 5px solid #34bd25;
+        span {
+          position: absolute;
+          width: 5px;
+          background: #34bd25;
+          display: block;
+          &:nth-child(1) {
+            transform: rotate(55deg);
+            height: 65px;
+            top: 31px;
+            right: 48px;
+          }
+          &:nth-child(2) {
+            transform: rotate(-35deg);
+            height: 25px;
+            right: 79px;
+            top: 60px;
+          }
+        }
+      }
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+      button {
+        width: 180px;
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 1px;
+        border-radius: 25px;
+        height: 50px;
+        background: #34bd25;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
   .pop-form {
     button {
       float: right;

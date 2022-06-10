@@ -1,5 +1,6 @@
 const openForm = document.getElementById("open"),
   closeForm = document.getElementById("close"),
+  updated = document.getElementById("updated"),
   layer = document.querySelector(".layer"),
   Form = document.querySelector(".pop-form"),
   save = document.querySelector(".save"),
@@ -28,7 +29,7 @@ closeForm.addEventListener("click", () => {
   Form.classList.add("hide");
   clearInputs();
   save.innerHTML = "Save";
-  mood = "add"
+  mood = "add";
 });
 for (let i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("focus", () => {
@@ -76,6 +77,8 @@ save.addEventListener("click", () => {
     } else {
       Employees[indx] = Employee;
       save.innerHTML = "Save";
+      Form.classList.add("hide");
+      updated.classList.remove("hide");
     }
     clearInputs();
     showData();
