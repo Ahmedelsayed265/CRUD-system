@@ -28,6 +28,7 @@ closeForm.addEventListener("click", () => {
   Form.classList.add("hide");
   clearInputs();
   save.innerHTML = "Save";
+  mood = "add"
 });
 for (let i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("focus", () => {
