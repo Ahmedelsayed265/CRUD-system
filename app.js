@@ -54,6 +54,7 @@ for (let j = 0; j < continues.length; j++) {
   closeAll[j].addEventListener("click", () => {
     Form.classList.add("hide");
     updated.classList.add("hide");
+    added.classList.add("hide");
     layer.classList.add("hide");
   });
 }
