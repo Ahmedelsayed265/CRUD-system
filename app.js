@@ -206,7 +206,3 @@ function getOptionValue() {
   options = document.getElementById("city").value;
 }
 showData();
-
-// main = document.querySelector("main").getBoundingClientRect().height,
-// main2 = document.querySelector("main"),
-// if (main <= parseInt(main2.style.height)) {
