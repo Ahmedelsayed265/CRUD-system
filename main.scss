@@ -102,8 +102,7 @@ body {
       }
       .input-field {
         width: 100%;
-        height: 50px;
-        border: 1px solid silver;
+        border: 1px solid #e0e0e0;
         margin-top: 26px;
         border-radius: 5px;
         position: relative;
@@ -217,6 +216,7 @@ body {
     padding: 5px 20px 0;
     .table {
       width: 100%;
+      border-collapse: collapse;
       thead {
         tr {
           color: #29129d;
@@ -226,6 +226,10 @@ body {
       #Tbody {
         tr {
           height: 50px;
+          border-bottom: 1px solid #e0e0e0;
+          &:last-child {
+            border-bottom: none;
+          }
           button {
             background: none;
             outline: none;

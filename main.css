@@ -158,8 +158,7 @@ body .pop-form form .outer-radio .radio-field:first-child {
 
 body .pop-form form .input-field {
   width: 100%;
-  height: 50px;
-  border: 1px solid silver;
+  border: 1px solid #e0e0e0;
   margin-top: 26px;
   border-radius: 5px;
   position: relative;
@@ -334,6 +333,7 @@ body main {
 
 body main .table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 body main .table thead tr {
@@ -343,6 +343,11 @@ body main .table thead tr {
 
 body main .table #Tbody tr {
   height: 50px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body main .table #Tbody tr:last-child {
+  border-bottom: none;
 }
 
 body main .table #Tbody tr button {
