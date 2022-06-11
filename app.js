@@ -1,16 +1,16 @@
 const openForm = document.getElementById("open"),
   closeForm = document.getElementById("close"),
-  updated = document.getElementById("updated"),
-  added = document.getElementById("added"),
-  layer = document.querySelector(".layer"),
   Form = document.querySelector(".pop-form"),
-  save = document.querySelector(".save"),
+  layer = document.querySelector(".layer"),
   Labels = document.querySelectorAll("form .input-field label"),
   inputs = document.querySelectorAll("form .input-field input"),
   selctions = document.querySelectorAll("form select option"),
+  radios = document.querySelectorAll(".rad"),
+  save = document.querySelector(".save"),
+  updated = document.getElementById("updated"),
+  added = document.getElementById("added"),
   continues = document.querySelectorAll(".continue"),
   closeAll = document.querySelectorAll(".close-all"),
-  radios = document.querySelectorAll(".rad"),
   tbody = document.getElementById("Tbody");
 let radioInput,
   options,
@@ -49,6 +49,7 @@ for (let index = 0; index < continues.length; index++) {
     Form.classList.remove("hide");
     updated.classList.add("hide");
     added.classList.add("hide");
+    mood = "add";
   });
 }
 for (let j = 0; j < continues.length; j++) {
@@ -229,8 +230,8 @@ function getOptionValue() {
   options = document.getElementById("city").value;
 }
 showData();
-  // for (let i = 0; main - TR >= 50; i++) {
-  //   main = main - TR;
-  // }
-  // TR = 50,
-  // main = document.querySelector("main").clientHeight - 65,
+// for (let i = 0; main - TR >= 50; i++) {
+//   main = main - TR;
+// }
+// TR = 50,
+// main = document.querySelector("main").clientHeight - 65,
