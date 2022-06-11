@@ -48,6 +48,7 @@ for (let index = 0; index < continues.length; index++) {
   continues[index].addEventListener("click", () => {
     Form.classList.remove("hide");
     updated.classList.add("hide");
+    added.classList.add("hide");
   });
 }
 for (let j = 0; j < continues.length; j++) {
