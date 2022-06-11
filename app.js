@@ -228,3 +228,8 @@ function getOptionValue() {
   options = document.getElementById("city").value;
 }
 showData();
+  // for (let i = 0; main - TR >= 50; i++) {
+  //   main = main - TR;
+  // }
+  // TR = 50,
+  // main = document.querySelector("main").clientHeight - 65,
