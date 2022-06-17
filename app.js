@@ -9,6 +9,9 @@ const openForm = document.getElementById("open"),
   save = document.querySelector(".save"),
   updated = document.getElementById("updated"),
   added = document.getElementById("added"),
+  deletion = document.getElementById("notice"),
+  cancel = document.getElementById("cancel"),
+  delete_btn = document.getElementById("delete_btn"),
   continues = document.querySelectorAll(".continue"),
   closeAll = document.querySelectorAll(".close-all"),
   tbody = document.getElementById("Tbody");
@@ -33,6 +36,10 @@ closeForm.addEventListener("click", () => {
   clearInputs();
   save.innerHTML = "Save";
   mood = "add";
+});
+cancel.addEventListener("click", () => {
+  layer.classList.add("hide");
+  deletion.classList.add("hide");
 });
 for (let i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener("focus", () => {
@@ -144,10 +151,21 @@ function showData() {
   tbody.innerHTML = table;
 }
 //=========Delete Employee========================//
+let del_indx;
 function deleteEmp(i) {
-  Employees.splice(i, 1);
+  layer.classList.remove("hide");
+  deletion.classList.remove("hide");
+  del_indx = i;
+  document.querySelector(".delete-wrapper p span").innerHTML =
+    Employees[i].Name;
+}
+delete_btn.addEventListener("click", deleted);
+function deleted() {
+  Employees.splice(del_indx, 1);
   localStorage.Emp = JSON.stringify(Employees);
   showData();
+  layer.classList.add("hide");
+  deletion.classList.add("hide");
 }
 //=========Update Employee Infromations=========//
 function Update(i) {
