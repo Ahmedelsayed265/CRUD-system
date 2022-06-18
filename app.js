@@ -219,6 +219,7 @@ function search(val) {
       Employees[i].Name.includes(val) ||
       Employees[i].Birth.includes(val) ||
       Employees[i].Dep.includes(val) ||
+      Employees[i].Gender.includes(val) ||
       Employees[i].City.includes(val)
     ) {
       table += `
